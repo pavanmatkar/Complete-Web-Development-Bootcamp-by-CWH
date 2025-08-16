@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alignment</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mozilla+Headline:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Lato", sans-serif;
+      }
+
+      .container {
+        width: 900px;
+        border: 3px solid purple;
+        margin: 33px auto;
+        background-color: sandybrown;
+      }
+      .item {
+        border: 3px solid grey;
+        margin: 12px 3px;
+        padding: 12px 3px;
+        background-color: rgb(239, 222, 222);
+      }
+      #fruit {
+        float: left;
+        width: 48%;
+      }
+      #computer {
+        float: left;
+        width: 48%;
+      }
+      #stationary {
+        /* float: left; */
+        clear: both;
+        width: 100%;
+      }
+      p,
+      h3 {
+        text-align: justify;
+      }
+      h1 {
+        margin: 23px auto;
+        width: 455px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to my store</h1>
+      <div id="fruit" class="item">
+        <h3>Fruits</h3>
+        <p id="fruitpara" class="para">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit ea
+          non vel officia fugiat reprehenderit consequuntur aperiam adipisci!
+          Debitis quae qui tempora? Suscipit laudantium nesciunt eum asperiores
+          officia rem est. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Officia, ad cumque modi porro animi dolore itaque aperiam atque
+          ipsam, architecto id. Impedit sapiente aut, fugit porro tempore quod,
+          nemo hic blanditiis consequuntur perspiciatis magni.
+        </p>
+      </div>
+      <div id="computer" class="item">
+        <h3>Computer</h3>
+        <p id="computerpara" class="para">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit ea
+          non vel officia fugiat reprehenderit consequuntur aperiam adipisci!
+          Debitis quae qui tempora? Suscipit laudantium nesciunt eum asperiores
+          officia rem est. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Officia, ad cumque modi porro animi dolore itaque aperiam atque
+          ipsam, architecto id. Impedit sapiente aut, fugit porro tempore quod,
+          nemo hic blanditiis consequuntur perspiciatis magni.
+        </p>
+      </div>
+      <div id="stationary" class="item">
+        <h3>Stationary</h3>
+        <p id="stationarypara" class="para">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit ea
+          non vel officia fugiat reprehenderit consequuntur aperiam adipisci!
+          Debitis quae qui tempora? Suscipit laudantium nesciunt eum asperiores
+          officia rem est.
+        </p>
+      </div>
+      <div id="glasses" class="item">
+        <h3>Glasses</h3>
+        <p id="glassespara" class="para">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit ea
+          non vel officia fugiat reprehenderit consequuntur aperiam adipisci!
+          Debitis quae qui tempora? Suscipit laudantium nesciunt eum asperiores
+          officia rem est.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts in CSS</title>
+    <!-- e.g. of web font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        /* There are two types of fonts
+        1. web safe fonts: which are preinstalled in all operating systems
+        2. web fonts: we need to import them from the web.
+            e.g. google fonts
+        */
+        p{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 45px;
+            /* px = 1/96th of an inch */
+            line-height: 1.3em;
+            /* em means multiplied by parents font size */
+        
+        }
+        span{
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* 
+        font stack
+        */
+    </style>
+</head>
+<body>
+    <h4>CSS Fonts</h4>
+    <p>Lets play with <span>fonts.</span> It is very exciting.</p>
+<p>example of websafe font</p>
+<p>example of web font</p>
+
+</body>
+</html>
