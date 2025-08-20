@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Shadow & Text Shadow</title>
+    <style>
+      .container {
+        display: flex;
+      }
+      .card {
+        padding: 23px 12px;
+        margin: 23px 12px;
+        /* border: 2px solid red; */
+        background-color: burlywood;
+
+        /* box-shadow: offset-x offset-y color; */
+        /* box-shadow: offset-x offset-y blur-radius color; */
+        /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+
+
+        /* shadow applied to down and right  */
+        /* box-shadow: 10px 13px green; */
+
+        /* shadow applied to up and left */
+        /* box-shadow: -10px -13px green; */
+
+        /* blur redius 10px */
+        box-shadow: 7px 5px 10px green;
+        box-shadow: -7px -5px 10px green;
+
+        /* spread radius */
+        box-shadow: 7px 5px 10px 34px green;
+        box-shadow: -7px -5px 10px 34px rgba(71, 171, 172, 0.5);
+        /* inset means inward */
+        box-shadow: inset 3px 5px green;
+        box-shadow: inset 3px 5px green, 4px 6px red;
+        .card h2{
+          text-shadow: 3px 4px green;
+          text-shadow: 3px 2px 2px white;
+          text-shadow: -3px -2px 2px white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" id="card-1">
+        <h2>Card-1</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero et
+          possimus eius magnam rerum, officiis nihil natus adipisci debitis,
+          eaque accusantium beatae dolor, est voluptatem. Deleniti, nobis
+          dolore. Cum a hic eius aliquam consequuntur.
+        </p>
+      </div>
+      <div class="card" id="card-3">
+        <h2>Card-2</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero et
+          possimus eius magnam rerum, officiis nihil natus adipisci debitis,
+          eaque accusantium beatae dolor, est voluptatem. Deleniti, nobis
+          dolore. Cum a hic eius aliquam consequuntur.
+        </p>
+      </div>
+      <div class="card" id="card-2">
+        <h2>Card-3</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero et
+          possimus eius magnam rerum, officiis nihil natus adipisci debitis,
+          eaque accusantium beatae dolor, est voluptatem. Deleniti, nobis
+          dolore. Cum a hic eius aliquam consequuntur.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
