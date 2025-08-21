@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autofit & Minmax</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            /* grid-template-columns: 112px 112px 112px; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+
+            /* this will make website responsive */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* justify-content: center; */
+        }
+        .box{
+            border: 2px solid black;
+            background-color: rgb(230, 149, 35);
+            padding: 34px;
+        }
+        @media (max-width: 300px){
+            body{
+                background-color: red;
+            }
+        }
+        @media (min-width: 300px) and (max-width: 500px){
+            body{
+                background-color: blue;
+            }
+        }
+        @media (min-width: 500px) and (max-width: 800px){
+            body{
+                background-color: yellow;
+            }
+        }
+        @media (min-width: 800px){
+            body{
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+        <div class="box">Item-7</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-9</div>
+        <div class="box">Item-10</div>
+        <div class="box">Item-11</div>
+        <div class="box">Item-12</div>
+    </div>
+</body>
+</html>
