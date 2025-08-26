@@ -1,340 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harry Fitness</title>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai&display=swap" rel="stylesheet">
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Fitness</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    body {
-      font-family: "Baloo Bhai", cursive;
-      color: white;
-      background: url("img/bg.jpg") no-repeat center center/cover;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+      body {
+        font-family: "Baloo Bhai", cursive;
+        color: white;
+        background: url("img/bg.jpg") no-repeat center center/cover;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
 
-    /* Header */
-    header {
-      width: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 10px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+      /* Header */
+      header {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
 
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: auto;
-    }
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+      }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
 
-    .logo img {
-      width: 50px;
-      filter: invert(100%);
-    }
+      .logo img {
+        width: 50px;
+        filter: invert(100%);
+      }
 
-    .logo span {
-      font-size: 24px;
-    }
+      .logo span {
+        font-size: 24px;
+      }
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-    }
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      transition: color 0.3s ease;
-    }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
 
-    nav a:hover {
-      color: grey;
-    }
+      nav a:hover {
+        color: grey;
+      }
 
-    .btn-group {
-      display: flex;
-      gap: 10px;
-    }
+      .btn-group {
+        display: flex;
+        gap: 10px;
+      }
 
-    .btn {
-      background: black;
-      color: white;
-      border: 2px solid grey;
-      border-radius: 10px;
-      padding: 6px 14px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
+      .btn {
+        background: black;
+        color: white;
+        border: 2px solid grey;
+        border-radius: 10px;
+        padding: 6px 14px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
 
-    .btn:hover {
-      background: rgb(31, 30, 30);
-    }
+      .btn:hover {
+        background: rgb(31, 30, 30);
+      }
 
-    /* Mobile Menu */
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-    }
-
-    .menu-toggle div {
-      width: 25px;
-      height: 3px;
-      background: white;
-    }
-
-    @media (max-width: 768px) {
-      nav {
+      /* Mobile Menu */
+      .menu-toggle {
         display: none;
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 60px;
-        right: 20px;
+        cursor: pointer;
+        gap: 5px;
+      }
+
+      .menu-toggle div {
+        width: 25px;
+        height: 3px;
+        background: white;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          display: none;
+          flex-direction: column;
+          background: rgba(0, 0, 0, 0.9);
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          padding: 20px;
+          border-radius: 10px;
+        }
+
+        nav.active {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: flex;
+        }
+      }
+
+      /* Hero Section */
+      .hero {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         padding: 20px;
-        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.6);
       }
 
-      nav.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-    }
-
-    /* Hero Section */
-    .hero {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.6);
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      max-width: 600px;
-    }
-
-    /* Form */
-    .container {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 30px;
-      border-radius: 20px;
-      max-width: 500px;
-      margin: 40px auto;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    }
-
-    .container h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 28px;
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    .form-group input {
-      width: 100%;
-      padding: 10px;
-      border: 2px solid grey;
-      border-radius: 8px;
-      font-size: 16px;
-      text-align: center;
-    }
-
-    .container button {
-      width: 100%;
-      margin-top: 10px;
-      font-size: 18px;
-    }
-
-    @media (max-width: 500px) {
       .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
+        max-width: 600px;
       }
+
+      /* Form */
       .container {
-        margin: 20px;
-        padding: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 30px;
+        border-radius: 20px;
+        max-width: 500px;
+        margin: 40px auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
       }
-    }
-    /* Extra Small Devices (375px and below) */
-@media (max-width: 375px) {
-  /* Logo */
-  .logo img {
-    width: 40px; /* smaller logo */
-  }
-  .logo span {
-    font-size: 18px; /* shrink text */
-  }
 
-  /* Hide buttons */
-  .btn-group {
-    display: none;
-  }
+      .container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 28px;
+      }
 
-  /* Hero */
-  .hero h1 {
-    font-size: 1.4rem;
-    padding: 0 10px;
-  }
+      .form-group {
+        margin-bottom: 15px;
+      }
 
-  /* Body alignment */
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid grey;
+        border-radius: 8px;
+        font-size: 16px;
+        text-align: center;
+      }
 
-  /* Container */
-  .container {
-    max-width: 90%;   /* responsive width */
-    margin: 20px auto;
-    padding: 15px;
-    border-radius: 12px;
-    text-align: center;
-  }
+      .container button {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 18px;
+      }
 
-  .container h2 {
-    font-size: 20px;
-  }
+      @media (max-width: 500px) {
+        .hero h1 {
+          font-size: 1.8rem;
+        }
+        .container {
+          margin: 20px;
+          padding: 20px;
+        }
+      }
+      /* Extra Small Devices (375px and below) */
+      @media (max-width: 375px) {
+        /* Logo */
+        .logo img {
+          width: 40px; /* smaller logo */
+        }
+        .logo span {
+          font-size: 18px; /* shrink text */
+        }
 
-  .form-group input {
-    width: 100%;       /* full width for mobile */
-    font-size: 14px;
-    padding: 8px;
-  }
+        /* Hide buttons */
+        .btn-group {
+          display: none;
+        }
 
-  .container button {
-    width: 100%;
-    font-size: 16px;
-    padding: 10px;
-  }
+        /* Hero */
+        .hero h1 {
+          font-size: 1.4rem;
+          padding: 0 10px;
+        }
 
-  /* Navbar links */
-  nav ul li a {
-    font-size: 16px;
-  }
-   /* Center header content */
-  .nav-container {
-    justify-content: center;
-    gap: 15px; /* space between logo & hamburger */
-  }
+        /* Body alignment */
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
 
-  /* Make hamburger smaller so it fits nicely */
-  .menu-toggle div {
-    width: 20px;
-    height: 2px;
-  }
-}
+        /* Container */
+        .container {
+          max-width: 90%; /* responsive width */
+          margin: 20px auto;
+          padding: 15px;
+          border-radius: 12px;
+          text-align: center;
+        }
 
+        .container h2 {
+          font-size: 20px;
+        }
 
-  </style>
-</head>
-<body>
+        .form-group input {
+          width: 100%; /* full width for mobile */
+          font-size: 14px;
+          padding: 8px;
+        }
 
-  <!-- Header -->
-  <header>
-    <div class="nav-container">
-      <div class="logo">
-        <img src="img/gym.jpg" alt="logo">
-        <span>Harry Fitness</span>
+        .container button {
+          width: 100%;
+          font-size: 16px;
+          padding: 10px;
+        }
+
+        /* Navbar links */
+        nav ul li a {
+          font-size: 16px;
+        }
+        /* Center header content */
+        .nav-container {
+          justify-content: center;
+          gap: 15px; /* space between logo & hamburger */
+        }
+
+        /* Make hamburger smaller so it fits nicely */
+        .menu-toggle div {
+          width: 20px;
+          height: 2px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="nav-container">
+        <div class="logo">
+          <img src="img/gym.jpg" alt="logo" />
+          <span>Harry Fitness</span>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Fitness Calculator</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <!-- Buttons -->
+        <div class="btn-group">
+          <button class="btn">Call Us</button>
+          <button class="btn">Email Us</button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="menu-toggle" id="menu-toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
+    </header>
 
-      <!-- Nav -->
-      <nav id="nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Fitness Calculator</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Join the Best Gym of Delhi Today & Transform Your Life!</h1>
+    </section>
 
-      <!-- Buttons -->
-      <div class="btn-group">
-        <button class="btn">Call Us</button>
-        <button class="btn">Email Us</button>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div class="menu-toggle" id="menu-toggle">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+    <!-- Form Section -->
+    <div class="container">
+      <h2>Sign Up Now</h2>
+      <form>
+        <div class="form-group">
+          <input type="text" placeholder="Enter your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="number" placeholder="Enter your Age" required />
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Enter your Gender" required />
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Enter your Locality" required />
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Enter your Email" required />
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Enter your Phone Number" required />
+        </div>
+        <button class="btn">Submit</button>
+      </form>
     </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Join the Best Gym of Delhi Today & Transform Your Life!</h1>
-  </section>
+    <script>
+      // Mobile Menu Toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const nav = document.getElementById("nav");
 
-  <!-- Form Section -->
-  <div class="container">
-    <h2>Sign Up Now</h2>
-    <form>
-      <div class="form-group">
-        <input type="text" placeholder="Enter your Name" required />
-      </div>
-      <div class="form-group">
-        <input type="number" placeholder="Enter your Age" required />
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="Enter your Gender" required />
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="Enter your Locality" required />
-      </div>
-      <div class="form-group">
-        <input type="email" placeholder="Enter your Email" required />
-      </div>
-      <div class="form-group">
-        <input type="tel" placeholder="Enter your Phone Number" required />
-      </div>
-      <button class="btn">Submit</button>
-    </form>
-  </div>
-
-  <script>
-    // Mobile Menu Toggle
-    const menuToggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("nav");
-
-    menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
-  </script>
-</body>
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+  </body>
 </html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autofit & Minmax</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      max-width: 1200px;     /* keeps grid centered and not too wide */
+      margin: 0 auto;        /* centers container */
+      padding: 1rem;         /* adds space on left/right for small screens */
+      width: 100%;
+    }
+
+    .box {
+      border: 2px solid black;
+      background-color: rgb(230, 149, 35);
+      padding: 34px;
+      text-align: center;   /* centers content inside box */
+      border-radius: 8px;   /* optional: makes boxes look nicer */
+    }
+
+    /* For very small screens (≤375px) */
+    @media (max-width: 375px) {
+      .container {
+        grid-template-columns: 1fr; /* single column */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">Item-1</div>
+    <div class="box">Item-2</div>
+    <div class="box">Item-3</div>
+    <div class="box">Item-4</div>
+    <div class="box">Item-5</div>
+    <div class="box">Item-6</div>
+    <div class="box">Item-7</div>
+    <div class="box">Item-8</div>
+    <div class="box">Item-9</div>
+    <div class="box">Item-10</div>
+    <div class="box">Item-11</div>
+    <div class="box">Item-12</div>
+  </div>
+</body>
+</html>
